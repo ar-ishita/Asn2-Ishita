@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{title}}</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/dataStyle.css">
+</head>
+<body>
+  <h1>Invoice Number</h1>
+  <table border="1">
+    <tr>
+      <th>Invoice ID</th>
+      <th>Image</th>
+      <th>Manufacturer</th>
+      <th>Class</th>
+      <th>Sales (in thousands)</th>
+      <th>Year Resale Value</th>
+      <th>Vehicle Type</th>
+      <th>Price (in thousands)</th>
+      <th>Engine Size</th>
+      <th>Horsepower</th>
+      <th>Wheelbase</th>
+      <th>Width</th>
+      <th>Length</th>
+      <th>Curb Weight</th>
+      <th>Fuel Capacity</th>
+      <th>Fuel Efficiency</th>
+      <th>Latest Launch</th>
+      <th>Power Perf Factor</th>
+    </tr>
+    <tr>
+      <td>{{indexDataInfo.InvoiceNo}}</td>
+      <td><img src="{{indexDataInfo.image}}" alt="{{indexDataInfo.Manufacturer}}"></td>
+      <td>{{indexDataInfo.Manufacturer}}</td>
+      <td>{{indexDataInfo.class}}</td>
+      <td>{{indexDataInfo.Sales_in_thousands}}</td>
+      <td>{{indexDataInfo.__year_resale_value}}</td>
+      <td>{{indexDataInfo.Vehicle_type}}</td>
+      <td>{{indexDataInfo.Price_in_thousands}}</td>
+      <td>{{indexDataInfo.Engine_size}}</td>
+      <td>{{indexDataInfo.Horsepower}}</td>
+      <td>{{indexDataInfo.Wheelbase}}</td>
+      <td>{{indexDataInfo.Width}}</td>
+      <td>{{indexDataInfo.Length}}</td>
+      <td>{{indexDataInfo.Curb_weight}}</td>
+      <td>{{indexDataInfo.Fuel_capacity}}</td>
+      <td>{{indexDataInfo.Fuel_efficiency}}</td>
+      <td>{{indexDataInfo.Latest_Launch}}</td>
+      <td>{{indexDataInfo.Power_perf_factor}}</td>
+    </tr>
+  </table>
+</body>
+</html>

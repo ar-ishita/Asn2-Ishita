@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/dataStyle.css">
+  <title>CAR SALES DATA</title>
+  <style>
+    .rowBlank {
+      background-color: rgb(15, 160, 204); /* Apply a highlight color to blank rows */
+    }
+  </style>
+
+</head>
+<body>
+  <h1>CAR SALES DATA</h1>
+  <table border="1">
+    <tr>
+      <th>Invoice No</th>
+      <th>Image</th>
+      <th>Manufacturer</th>
+      <th>Class</th>
+      <th>Sales (in thousands)</th>
+      <th>Year Resale Value</th>
+      <th>Vehicle Type</th>
+      <th>Price (in thousands)</th>
+      <th>Engine Size</th>
+      <th>Horsepower</th>
+      <th>Wheelbase</th>
+      <th>Width</th>
+      <th>Length</th>
+      <th>Curb Weight</th>
+      <th>Fuel Capacity</th>
+      <th>Fuel Efficiency</th>
+      <th>Latest Launch</th>
+      <th>Power Perf Factor</th>
+    </tr>
+    {{#each jsonData}}
+      <tr{{#unless (replaceBlank class "")}} class="rowBlank"{{/unless}}>
+        <td>{{InvoiceNo}}</td>
+        <td><img src="{{image}}" alt="{{Manufacturer}}" width="100"></td>
+        <td>{{Manufacturer}}</td>
+        <td>{{class}}</td>
+        <td>{{Sales_in_thousands}}</td>
+        <td>{{__year_resale_value}}</td>
+        <td>{{Vehicle_type}}</td>
+        <td>{{Price_in_thousands}}</td>
+        <td>{{Engine_size}}</td>
+        <td>{{Horsepower}}</td>
+        <td>{{Wheelbase}}</td>
+        <td>{{Width}}</td>
+        <td>{{Length}}</td>
+        <td>{{Curb_weight}}</td>
+        <td>{{Fuel_capacity}}</td>
+        <td>{{Fuel_efficiency}}</td>
+        <td>{{Latest_Launch}}</td>
+        <td>{{Power_perf_factor}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</body>
+</html>

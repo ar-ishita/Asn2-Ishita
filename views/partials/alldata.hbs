@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sales Data</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/dataStyle.css">
+</head>
+<body>
+  <h1>SALES DATA</h1>
+  <table border="1">
+    <tr>
+      <th>Invoice ID</th>
+      <th>Branch</th>
+      <th>City</th>
+      <th>Customer Type</th>
+      <th>Product Line</th>
+      <th>Unit Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Payment</th>
+      <th>COGS</th>
+      <th>Rating</th>
+    </tr>
+    {{#each jsonDataSales.storeSales}}
+      <tr>
+        <td>{{InvoiceID}}</td>
+        <td>{{Branch}}</td>
+        <td>{{City}}</td>
+        <td>{{customerType}}</td>
+        <td>{{productLine}}</td>
+        <td>{{unitPrice}}</td>
+        <td>{{Quantity}}</td>
+        <td>{{Total}}</td>
+        <td>{{Date}}</td>
+        <td>{{Time}}</td>
+        <td>{{Payment}}</td>
+        <td>{{cogs}}</td>
+        <td>{{Rating}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</body>
+</html>
